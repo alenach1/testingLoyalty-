@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,6 +52,9 @@
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HXf-tY-d6V"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ZqW-DS-Nz8">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -60,22 +63,28 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qqN-K3-jKh" secondAttribute="trailing" constant="20" id="KLv-dM-3p9"/>
                             <constraint firstItem="qqN-K3-jKh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O05-QG-VjQ"/>
                             <constraint firstItem="fxy-dj-7Yk" firstAttribute="top" secondItem="qqN-K3-jKh" secondAttribute="bottom" constant="30" id="QQx-Iy-V6R"/>
+                            <constraint firstItem="ZqW-DS-Nz8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TyY-Ii-jJS"/>
                             <constraint firstItem="3Kn-j5-naD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Wgq-ev-ecd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Kn-j5-naD" secondAttribute="trailing" constant="20" id="Xuv-Hx-E3f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxy-dj-7Yk" secondAttribute="trailing" constant="20" id="Zbd-w9-eIG"/>
                             <constraint firstItem="3Kn-j5-naD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ckS-9u-3mV"/>
+                            <constraint firstItem="ZqW-DS-Nz8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.0483092" id="dOE-RV-khZ"/>
+                            <constraint firstItem="ZqW-DS-Nz8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hHr-Yd-E2v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gbO-jb-Wlu"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ZqW-DS-Nz8" id="64Y-HW-gBM"/>
                         <outlet property="lable" destination="3Kn-j5-naD" id="gwP-Ab-nLy"/>
+                        <outlet property="loginButtonOutlet" destination="fxy-dj-7Yk" id="uxe-UE-M3u"/>
                         <outlet property="passwordTextField" destination="8Jn-sz-mk5" id="ads-4d-OW3"/>
                         <outlet property="usernameTextField" destination="ZOE-fY-bDJ" id="3AA-zd-kpm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="fxN-Dp-lIr">
@@ -105,6 +114,9 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <state key="normal" title="Назад"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="l6T-5f-2YY" eventType="touchUpInside" id="qvl-2e-eRt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -125,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pke-xO-2b1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="124"/>
+            <point key="canvasLocation" x="1791.304347826087" y="123.88392857142857"/>
         </scene>
     </scenes>
 </document>
